@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>NVA-IT</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+      var sizes = new Array(0,1,2,4,8,10,12,14);
+      sizes.pos = 0;
+    
+function Elastic()
+{
+    var el = document.all.elastic
+    if (null == el.direction)el.direction = 1
+    else if ((sizes.pos > sizes.length - 2) || (0 == sizes.pos))
+    el.direction *= -1
+    el.style.letterSpacing = sizes[sizes.pos += el.direction]
+setTimeout('Elastic()',100)
+}
+
+</SCRIPT>
+<BODY  background="p.jpg"  onLoad=Elastic()>
+<CENTER>
+<br>
+<font color="purple"><h1>Hello from Simple Web!</h1>
+<font color="blue"><H1 ID="elastic" ALIGN="Center">DevOps / Cloud Engineering</H1>
+<br>
+<br>
+<img src="ch.jpg" width=1024>
+<br>
+<br>
+<h2><font color="magenta">Made by Vitaliy Nazarov</font></h2><br><p>
+</body>
+</HTML>
